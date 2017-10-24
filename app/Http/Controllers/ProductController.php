@@ -21,8 +21,7 @@ class ProductController extends Controller
 {
     public function getIndex(){
     	$products = Product::all();
-        $categories = Category::all();
-    	return view('shop.index',['products'=>$products,'categories'=>$categories]);
+    	return view('shop.index',['products'=>$products]);
     }
 
     public function getAddToCart(Request $request,$id){
@@ -103,13 +102,6 @@ class ProductController extends Controller
         $product = Product::find($id);
 
         return view('shop.single')->with('product',$product);
-    }
-
-
-    public function getAllByCategory($id){
-        $books = Product::where('category_id',$id)->get();
-
-        return view('shop.category',['books'=>$books]);
     }
 
     public function getAddProduct(){
