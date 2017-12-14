@@ -48,3 +48,9 @@
 		</div>
 	</div>
 @endsection
+
+@section('scripts')
+<script type="text/javascript">
+	$('#charge-message').fadeOut(400);
+</script>
+@endsection

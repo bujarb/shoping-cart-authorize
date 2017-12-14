@@ -38,24 +38,24 @@
 						</div>
 						<div class="col-xs-12">
 							<div class="row">
-								<div class="col-xs-6">
+								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="card-expiry-month">Expiration Month</label>
+										<label for="card-expiry-month">Exp Month</label>
 										<input type="text" name="card-expiry-month" id="card-expiry-month" class="form-control" required maxlength="2">
 									</div>
 								</div>
-								<div class="col-xs-6">
+								<div class="col-xs-4">
 									<div class="form-group">
-										<label for="card-expiry-year">Expiration Year</label>
+										<label for="card-expiry-year">Exp Year</label>
 										<input type="text" name="card-expiry-year" id="card-expiry-year" class="form-control" required maxlength="4">
 									</div>
 								</div>
-							</div>
-						</div>
-						<div class="col-xs-12">
-							<div class="form-group">
-								<label for="cvc">CVC</label>
-								<input type="text" name="card-cvc" class="form-control" required maxlength="3">
+								<div class="col-xs-4">
+									<div class="form-group">
+										<label for="cvc">CVC</label>
+										<input type="text" name="card-cvc" class="form-control" required maxlength="3">
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
