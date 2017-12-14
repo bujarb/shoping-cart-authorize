@@ -39,7 +39,6 @@
             @if(Route::currentRouteName() != 'user.profile')
               <li><a href="{{route('user.profile')}}">Profile</a></li>
             @endif
-            <li><a href="{{route('product.add')}}">Add Product</a></li>
             <li><a href="{{route('user.logout')}}">Logout</a></li>
             @endif
           </ul>

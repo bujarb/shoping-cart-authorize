@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use net\authorize\api\controller as AnetController;
+use net\authorize\api\contract\v1 as AnetAPI;
 use Illuminate\Http\Request;
-use App\Product;
-use Session;
-use App\Cart;
-use Auth;
 use Stripe\Stripe;
 use Stripe\Charge;
+use App\Product;
 use App\Order;
-use App\Category;
+use App\Cart;
+use Session;
+use Auth;
 use DB;
-use net\authorize\api\contract\v1 as AnetAPI;
-use net\authorize\api\controller as AnetController;
+
 
 define("AUTHORIZENET_LOG_FILE", "phplog");
 

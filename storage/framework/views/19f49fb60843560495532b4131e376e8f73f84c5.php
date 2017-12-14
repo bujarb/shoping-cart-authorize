@@ -39,7 +39,6 @@
             <?php if(Route::currentRouteName() != 'user.profile'): ?>
               <li><a href="<?php echo e(route('user.profile')); ?>">Profile</a></li>
             <?php endif; ?>
-            <li><a href="<?php echo e(route('product.add')); ?>">Add Product</a></li>
             <li><a href="<?php echo e(route('user.logout')); ?>">Logout</a></li>
             <?php endif; ?>
           </ul>

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Order;
 use Auth;
 
-class UserController extends Controller
+class ProfileController extends Controller
 {
     public function getProfile(){
         $orders = Auth::user()->orders;
