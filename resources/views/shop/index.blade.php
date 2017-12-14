@@ -15,26 +15,35 @@
 		</div>
 	@endif
 	<div class="row">
-
-		<div class="col-md-8 col-md-offset-2">
+		<div class="col-md-12">
 			<div class="row row1">
-				<h1 class="text-center">Products</h1>
+
 				<hr>
-				@foreach($products as $product)
-			    <div class="col-md-4">
-			    	<div class="thumbnail">
-			      <div class="caption">
-			        <h3>{{$product->name}}</h3>
-							<hr>
-			        <p class="description"></p>
-			        <div class="clearfix">
-			        	<div class="pull-left price">${{$product->price}}</div>
-			        	<a href="{{route('product.addToCart',$product->id)}}" class="btn btn-info pull-right" role="button">Add to Cart</a>
-			        </div>
-			      </div>
-			  	</div>
-			    </div>
-			  @endforeach
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+				    <h1 class="text-center">Products</h1>
+				  </div>
+				  <div class="panel-body">
+						@foreach($products as $product)
+					    <div class="col-md-4">
+					    	<div class="thumbnail">
+					      <div class="caption">
+					        <h3>{{$product->name}}</h3>
+									<hr>
+					        <p class="description"></p>
+					        <div class="clearfix">
+					        	<div class="pull-left price">${{$product->price}}</div>
+					        	<a href="{{route('product.addToCart',$product->id)}}" class="btn btn-info pull-right no-border" role="button">Add to Cart</a>
+					        </div>
+					      </div>
+					  	</div>
+					    </div>
+					  @endforeach
+				  </div>
+				  <div class="panel-footer text-center">
+						{{$products->links()}}
+				  </div>
+				</div>
 			</div>
 		</div>
 	</div>

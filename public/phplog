@@ -1614,3 +1614,1143 @@
  Mon, 05 Jun 2017 21:42:21 +0000 INFO : [_sendRequest] (/www/html/buja/laravel-shoping-cart-authorize/vendor/authorizenet/authorizenet/lib/net/authorize/util/HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><transactionResponse><responseCode>1</responseCode><authCode>ZKBN3S</authCode><avsResultCode>Y</avsResultCode><cvvResultCode>P</cvvResultCode><cavvResultCode>2</cavvResultCode><transId>60024731660</transId><refTransID /><transHash>624C240E4F69A5C85C90640107202485</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><messages><message><code>1</code><description>This transaction has been approved.</description></message></messages><transHashSha2 /></transactionResponse></createTransactionResponse>
  Mon, 05 Jun 2017 21:42:21 +0000 INFO : [execute] (/www/html/buja/laravel-shoping-cart-authorize/vendor/authorizenet/authorizenet/lib/net/authorize/api/controller/base/ApiOperationBase.php : 128) - Response De-Serialization Begin
  Mon, 05 Jun 2017 21:42:21 +0000 INFO : [execute] (/www/html/buja/laravel-shoping-cart-authorize/vendor/authorizenet/authorizenet/lib/net/authorize/api/controller/base/ApiOperationBase.php : 130) - Response De-Serialization End
+ Thu, 14 Dec 2017 15:31:41 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Thu, 14 Dec 2017 15:31:41 +0000 DEBUG : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 1629
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-1111
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [terminalNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 4s55wUMtE
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.1
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Thu, 14 Dec 2017 15:31:42 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Thu, 14 Dec 2017 15:31:42 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Thu, 14 Dec 2017 15:31:42 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[4s55wUMtE]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.1]]></clientId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>1629</amount>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-1111</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+      </creditCard>
+    </payment>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Thu, 14 Dec 2017 15:31:42 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Thu, 14 Dec 2017 15:31:42 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Thu, 14 Dec 2017 15:31:44 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><transactionResponse><responseCode>1</responseCode><authCode>BME4K9</authCode><avsResultCode>Y</avsResultCode><cvvResultCode>P</cvvResultCode><cavvResultCode>2</cavvResultCode><transId>60036229053</transId><refTransID /><transHash>A03809CCFE61C7E7F4E27EC1CCA82379</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><messages><message><code>1</code><description>This transaction has been approved.</description></message></messages><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Thu, 14 Dec 2017 15:31:44 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Thu, 14 Dec 2017 15:31:44 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Thu, 14 Dec 2017 15:42:56 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Thu, 14 Dec 2017 15:42:56 +0000 DEBUG : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 1443
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-1111
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [terminalNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 4s55wUMtE
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.1
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Thu, 14 Dec 2017 15:42:56 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Thu, 14 Dec 2017 15:42:56 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Thu, 14 Dec 2017 15:42:56 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[4s55wUMtE]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.1]]></clientId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>1443</amount>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-1111</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+      </creditCard>
+    </payment>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Thu, 14 Dec 2017 15:42:56 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Thu, 14 Dec 2017 15:42:56 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Thu, 14 Dec 2017 15:42:57 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><transactionResponse><responseCode>1</responseCode><authCode>Z34K41</authCode><avsResultCode>Y</avsResultCode><cvvResultCode>P</cvvResultCode><cavvResultCode>2</cavvResultCode><transId>60036229817</transId><refTransID /><transHash>778751C067884C73FC69B6CAF9D1014C</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><messages><message><code>1</code><description>This transaction has been approved.</description></message></messages><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Thu, 14 Dec 2017 15:42:57 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Thu, 14 Dec 2017 15:42:58 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Thu, 14 Dec 2017 15:43:14 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Thu, 14 Dec 2017 15:43:14 +0000 DEBUG : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 1443
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-1111
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [terminalNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 4s55wUMtE
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.1
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Thu, 14 Dec 2017 15:43:14 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Thu, 14 Dec 2017 15:43:14 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Thu, 14 Dec 2017 15:43:14 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[4s55wUMtE]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.1]]></clientId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>1443</amount>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-1111</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+      </creditCard>
+    </payment>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Thu, 14 Dec 2017 15:43:14 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Thu, 14 Dec 2017 15:43:14 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Thu, 14 Dec 2017 15:43:15 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Error</resultCode><message><code>E00027</code><text>The transaction was unsuccessful.</text></message></messages><transactionResponse><responseCode>3</responseCode><authCode /><avsResultCode>P</avsResultCode><cvvResultCode /><cavvResultCode /><transId>0</transId><refTransID /><transHash>A7BDD6E39C1C573B34A368E59A5DB6B3</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><errors><error><errorCode>11</errorCode><errorText>A duplicate transaction has been submitted.</errorText></error></errors><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Thu, 14 Dec 2017 15:43:15 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Thu, 14 Dec 2017 15:43:16 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Thu, 14 Dec 2017 15:52:47 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Thu, 14 Dec 2017 15:52:47 +0000 DEBUG : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 1443
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-1111
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [terminalNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 4s55wUMtE
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.1
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Thu, 14 Dec 2017 15:52:47 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Thu, 14 Dec 2017 15:52:47 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Thu, 14 Dec 2017 15:52:47 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[4s55wUMtE]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.1]]></clientId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>1443</amount>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-1111</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+      </creditCard>
+    </payment>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Thu, 14 Dec 2017 15:52:47 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Thu, 14 Dec 2017 15:52:47 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Thu, 14 Dec 2017 15:52:48 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><transactionResponse><responseCode>1</responseCode><authCode>6LK6UX</authCode><avsResultCode>Y</avsResultCode><cvvResultCode>P</cvvResultCode><cavvResultCode>2</cavvResultCode><transId>60036230577</transId><refTransID /><transHash>33C48D399328A6B5EC957AED4422A73A</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><messages><message><code>1</code><description>This transaction has been approved.</description></message></messages><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Thu, 14 Dec 2017 15:52:48 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Thu, 14 Dec 2017 15:52:48 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Thu, 14 Dec 2017 15:52:57 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Thu, 14 Dec 2017 15:52:57 +0000 DEBUG : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 1443
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-1111
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [terminalNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 4s55wUMtE
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.1
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Thu, 14 Dec 2017 15:52:57 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Thu, 14 Dec 2017 15:52:57 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Thu, 14 Dec 2017 15:52:57 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[4s55wUMtE]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.1]]></clientId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>1443</amount>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-1111</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+      </creditCard>
+    </payment>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Thu, 14 Dec 2017 15:52:57 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Thu, 14 Dec 2017 15:52:57 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Thu, 14 Dec 2017 15:52:58 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Error</resultCode><message><code>E00027</code><text>The transaction was unsuccessful.</text></message></messages><transactionResponse><responseCode>3</responseCode><authCode /><avsResultCode>P</avsResultCode><cvvResultCode /><cavvResultCode /><transId>0</transId><refTransID /><transHash>A7BDD6E39C1C573B34A368E59A5DB6B3</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><errors><error><errorCode>11</errorCode><errorText>A duplicate transaction has been submitted.</errorText></error></errors><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Thu, 14 Dec 2017 15:52:58 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Thu, 14 Dec 2017 15:52:58 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Thu, 14 Dec 2017 16:03:56 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Thu, 14 Dec 2017 16:03:56 +0000 DEBUG : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 543
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-1111
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [terminalNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 4s55wUMtE
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.1
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Thu, 14 Dec 2017 16:03:56 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Thu, 14 Dec 2017 16:03:56 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Thu, 14 Dec 2017 16:03:56 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[4s55wUMtE]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.1]]></clientId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>543</amount>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-1111</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+      </creditCard>
+    </payment>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Thu, 14 Dec 2017 16:03:56 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Thu, 14 Dec 2017 16:03:56 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Thu, 14 Dec 2017 16:03:57 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><transactionResponse><responseCode>1</responseCode><authCode>Q3WA22</authCode><avsResultCode>Y</avsResultCode><cvvResultCode>P</cvvResultCode><cavvResultCode>2</cavvResultCode><transId>60036230906</transId><refTransID /><transHash>5DFCD56122D99019B5AD9995D8B9032A</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><messages><message><code>1</code><description>This transaction has been approved.</description></message></messages><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Thu, 14 Dec 2017 16:03:57 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Thu, 14 Dec 2017 16:03:57 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Thu, 14 Dec 2017 16:05:05 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Thu, 14 Dec 2017 16:05:05 +0000 DEBUG : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 543
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-1111
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [terminalNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 4s55wUMtE
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.1
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Thu, 14 Dec 2017 16:05:05 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Thu, 14 Dec 2017 16:05:05 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Thu, 14 Dec 2017 16:05:05 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[4s55wUMtE]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.1]]></clientId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>543</amount>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-1111</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+      </creditCard>
+    </payment>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Thu, 14 Dec 2017 16:05:05 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Thu, 14 Dec 2017 16:05:05 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Thu, 14 Dec 2017 16:05:06 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Error</resultCode><message><code>E00027</code><text>The transaction was unsuccessful.</text></message></messages><transactionResponse><responseCode>3</responseCode><authCode /><avsResultCode>P</avsResultCode><cvvResultCode /><cavvResultCode /><transId>0</transId><refTransID /><transHash>A53249DCFB8E91A6F81B5496F48CD156</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><errors><error><errorCode>11</errorCode><errorText>A duplicate transaction has been submitted.</errorText></error></errors><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Thu, 14 Dec 2017 16:05:06 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Thu, 14 Dec 2017 16:05:06 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Thu, 14 Dec 2017 16:05:22 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Thu, 14 Dec 2017 16:05:22 +0000 DEBUG : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 543
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-1111
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [terminalNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 4s55wUMtE
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.1
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Thu, 14 Dec 2017 16:05:22 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Thu, 14 Dec 2017 16:05:22 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Thu, 14 Dec 2017 16:05:22 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[4s55wUMtE]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.1]]></clientId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>543</amount>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-1111</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+      </creditCard>
+    </payment>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Thu, 14 Dec 2017 16:05:22 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Thu, 14 Dec 2017 16:05:22 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Thu, 14 Dec 2017 16:05:23 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Error</resultCode><message><code>E00027</code><text>The transaction was unsuccessful.</text></message></messages><transactionResponse><responseCode>3</responseCode><authCode /><avsResultCode>P</avsResultCode><cvvResultCode /><cavvResultCode /><transId>0</transId><refTransID /><transHash>A53249DCFB8E91A6F81B5496F48CD156</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><errors><error><errorCode>11</errorCode><errorText>A duplicate transaction has been submitted.</errorText></error></errors><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Thu, 14 Dec 2017 16:05:23 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Thu, 14 Dec 2017 16:05:23 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Thu, 14 Dec 2017 16:06:26 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Thu, 14 Dec 2017 16:06:27 +0000 DEBUG : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 543
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-1111
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [terminalNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 4s55wUMtE
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.1
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Thu, 14 Dec 2017 16:06:27 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Thu, 14 Dec 2017 16:06:27 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Thu, 14 Dec 2017 16:06:27 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[4s55wUMtE]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.1]]></clientId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>543</amount>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-1111</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+      </creditCard>
+    </payment>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Thu, 14 Dec 2017 16:06:27 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Thu, 14 Dec 2017 16:06:27 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Thu, 14 Dec 2017 16:06:28 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><transactionResponse><responseCode>1</responseCode><authCode>WGEB75</authCode><avsResultCode>Y</avsResultCode><cvvResultCode>P</cvvResultCode><cavvResultCode>2</cavvResultCode><transId>60036230949</transId><refTransID /><transHash>8350D694242EC8C38E77B729D2AE657C</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><messages><message><code>1</code><description>This transaction has been approved.</description></message></messages><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Thu, 14 Dec 2017 16:06:28 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Thu, 14 Dec 2017 16:06:28 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Thu, 14 Dec 2017 16:06:39 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Thu, 14 Dec 2017 16:06:39 +0000 DEBUG : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 543
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-1111
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [terminalNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 4s55wUMtE
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.1
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Thu, 14 Dec 2017 16:06:39 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Thu, 14 Dec 2017 16:06:39 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Thu, 14 Dec 2017 16:06:39 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[4s55wUMtE]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.1]]></clientId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>543</amount>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-1111</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+      </creditCard>
+    </payment>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Thu, 14 Dec 2017 16:06:39 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Thu, 14 Dec 2017 16:06:39 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Thu, 14 Dec 2017 16:06:39 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Error</resultCode><message><code>E00027</code><text>The transaction was unsuccessful.</text></message></messages><transactionResponse><responseCode>3</responseCode><authCode /><avsResultCode>P</avsResultCode><cvvResultCode /><cavvResultCode /><transId>0</transId><refTransID /><transHash>A53249DCFB8E91A6F81B5496F48CD156</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><errors><error><errorCode>11</errorCode><errorText>A duplicate transaction has been submitted.</errorText></error></errors><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Thu, 14 Dec 2017 16:06:39 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Thu, 14 Dec 2017 16:06:40 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Thu, 14 Dec 2017 16:07:38 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Thu, 14 Dec 2017 16:07:38 +0000 DEBUG : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 543
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-1111
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [terminalNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 4s55wUMtE
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.1
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Thu, 14 Dec 2017 16:07:38 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Thu, 14 Dec 2017 16:07:38 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Thu, 14 Dec 2017 16:07:38 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[4s55wUMtE]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.1]]></clientId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>543</amount>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-1111</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+      </creditCard>
+    </payment>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Thu, 14 Dec 2017 16:07:38 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Thu, 14 Dec 2017 16:07:38 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Thu, 14 Dec 2017 16:07:39 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Error</resultCode><message><code>E00027</code><text>The transaction was unsuccessful.</text></message></messages><transactionResponse><responseCode>3</responseCode><authCode /><avsResultCode>P</avsResultCode><cvvResultCode /><cavvResultCode /><transId>0</transId><refTransID /><transHash>A53249DCFB8E91A6F81B5496F48CD156</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><errors><error><errorCode>11</errorCode><errorText>A duplicate transaction has been submitted.</errorText></error></errors><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Thu, 14 Dec 2017 16:07:39 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Thu, 14 Dec 2017 16:07:39 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End
+ Thu, 14 Dec 2017 16:09:03 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 114) - Request Serialization Begin
+ Thu, 14 Dec 2017 16:09:03 +0000 DEBUG : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 115) - net\authorize\api\contract\v1\CreateTransactionRequest Object
+(
+    [transactionRequest:net\authorize\api\contract\v1\CreateTransactionRequest:private] => net\authorize\api\contract\v1\TransactionRequestType Object
+        (
+            [transactionType:net\authorize\api\contract\v1\TransactionRequestType:private] => authCaptureTransaction
+            [amount:net\authorize\api\contract\v1\TransactionRequestType:private] => 543
+            [currencyCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [payment:net\authorize\api\contract\v1\TransactionRequestType:private] => net\authorize\api\contract\v1\PaymentType Object
+                (
+                    [creditCard:net\authorize\api\contract\v1\PaymentType:private] => net\authorize\api\contract\v1\CreditCardType Object
+                        (
+                            [cardCode:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [isPaymentToken:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cryptogram:net\authorize\api\contract\v1\CreditCardType:private] => 
+                            [cardNumber:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx-1111
+                            [expirationDate:net\authorize\api\contract\v1\CreditCardSimpleType:private] => xxxx
+                        )
+
+                    [bankAccount:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [trackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [encryptedTrackData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [payPal:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [opaqueData:net\authorize\api\contract\v1\PaymentType:private] => 
+                    [emv:net\authorize\api\contract\v1\PaymentType:private] => 
+                )
+
+            [profile:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [solution:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [callId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [terminalNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [authCode:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [refTransId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [splitTenderId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [order:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [lineItems:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [tax:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [duty:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipping:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [taxExempt:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [poNumber:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customer:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [billTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [shipTo:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [customerIP:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [cardholderAuthentication:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [retail:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [employeeId:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [transactionSettings:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+            [userFields:net\authorize\api\contract\v1\TransactionRequestType:private] => 
+        )
+
+    [merchantAuthentication:net\authorize\api\contract\v1\ANetApiRequestType:private] => net\authorize\api\contract\v1\MerchantAuthenticationType Object
+        (
+            [name:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 4s55wUMtE
+            [transactionKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => xxxx
+            [sessionToken:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [password:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [impersonationAuthentication:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [fingerPrint:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [clientKey:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+            [mobileDeviceId:net\authorize\api\contract\v1\MerchantAuthenticationType:private] => 
+        )
+
+    [clientId:net\authorize\api\contract\v1\ANetApiRequestType:private] => sdk-php-1.9.1
+    [refId:net\authorize\api\contract\v1\ANetApiRequestType:private] => 
+)
+
+ Thu, 14 Dec 2017 16:09:03 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 118) - Request  Serialization End
+ Thu, 14 Dec 2017 16:09:03 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 75) -  Url: https://apitest.authorize.net/xml/v1/request.api
+ Thu, 14 Dec 2017 16:09:03 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 77) - Request to AnetApi: 
+<?xml version="1.0" encoding="UTF-8"?>
+<createTransactionRequest xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd">
+  <merchantAuthentication>
+    <name><![CDATA[4s55wUMtE]]></name>
+    <transactionKey>xxxx</transactionKey>
+  </merchantAuthentication>
+  <clientId><![CDATA[sdk-php-1.9.1]]></clientId>
+  <transactionRequest>
+    <transactionType><![CDATA[authCaptureTransaction]]></transactionType>
+    <amount>543</amount>
+    <payment>
+      <creditCard>
+        <cardNumber>xxxx-1111</cardNumber>
+        <expirationDate>xxxx</expirationDate>
+      </creditCard>
+    </payment>
+  </transactionRequest>
+</createTransactionRequest>
+
+ Thu, 14 Dec 2017 16:09:03 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 89) - Sending 'XML' Request type
+ Thu, 14 Dec 2017 16:09:03 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 94) - Sending http request via Curl
+ Thu, 14 Dec 2017 16:09:04 +0000 INFO : [_sendRequest] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\util\HttpClient.php : 96) - Response from AnetApi: ﻿<?xml version="1.0" encoding="utf-8"?><createTransactionResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="AnetApi/xml/v1/schema/AnetApiSchema.xsd"><messages><resultCode>Ok</resultCode><message><code>I00001</code><text>Successful.</text></message></messages><transactionResponse><responseCode>1</responseCode><authCode>AD98AO</authCode><avsResultCode>Y</avsResultCode><cvvResultCode>P</cvvResultCode><cavvResultCode>2</cavvResultCode><transId>60036231007</transId><refTransID /><transHash>A25DB9740E0DF122A16A894F8C165136</transHash><testRequest>0</testRequest><accountNumber>XXXX1111</accountNumber><accountType>Visa</accountType><messages><message><code>1</code><description>This transaction has been approved.</description></message></messages><transHashSha2 /></transactionResponse></createTransactionResponse>
+ Thu, 14 Dec 2017 16:09:04 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 128) - Response De-Serialization Begin
+ Thu, 14 Dec 2017 16:09:04 +0000 INFO : [execute] (C:\Users\bujar\Desktop\Laravel-Projects\laravel-shoping-cart-authorize\vendor\authorizenet\authorizenet\lib\net\authorize\api\controller\base\ApiOperationBase.php : 130) - Response De-Serialization End

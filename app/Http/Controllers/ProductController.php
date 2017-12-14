@@ -20,7 +20,7 @@ define("AUTHORIZENET_LOG_FILE", "phplog");
 class ProductController extends Controller
 {
     public function getIndex(){
-    	$products = Product::all();
+    	$products = Product::paginate(12);
     	return view('shop.index',['products'=>$products]);
     }
 
@@ -83,16 +83,26 @@ class ProductController extends Controller
           $transactionRequestType->setAmount($cart->totalPrice);
           $transactionRequestType->setPayment($paymentOne);
 
-          $request = new AnetAPI\CreateTransactionRequest();
-          $request->setMerchantAuthentication($merchantAuthentication);
-          $request->setTransactionRequest( $transactionRequestType);
-          $controller = new AnetController\CreateTransactionController($request);
+          $authorizerequest = new AnetAPI\CreateTransactionRequest();
+          $authorizerequest->setMerchantAuthentication($merchantAuthentication);
+          $authorizerequest->setTransactionRequest( $transactionRequestType);
+          $controller = new AnetController\CreateTransactionController($authorizerequest);
           $response = $controller->executeWithApiResponse( \net\authorize\api\constants\ANetEnvironment::SANDBOX);
+
+          $tresponse = $response->getTransactionResponse();
+
 
         } catch (Exception $e) {
           return redirect()->route('checkout')->with('error',$e->getMessage());
         }
 
+        $order =  new Order();
+        $order->user_id = Auth::user()->id;
+        $order->cart = serialize($cart);
+        $order->name = $request->input('cardholdername');
+        $order->address = $request->input('address');
+        $order->payment_id = $tresponse->getTransId();
+        $order->save();
 
         Session::forget('cart');
         return redirect()->route('product.index')->with('success','Successfuly purchased products');
@@ -104,25 +114,4 @@ class ProductController extends Controller
         return view('shop.single')->with('product',$product);
     }
 
-    public function getAddProduct(){
-        $categories = Category::all();
-        return view('shop.addproduct',['categories'=>$categories]);
-    }
-
-    public function postAddProduct(Request $request){
-        $this->validate($request,[
-            'name' => 'required',
-            'price' => 'required'
-        ]);
-
-        $product = new Product();
-        $product->name = $request->input('name');
-        $product->price = $request->input('price');
-        $product->user_id = Auth::user()->id;
-        $product->category_id = $request->input('category');
-
-        $product->save();
-
-        return redirect()->route('product.index');
-    }
 }

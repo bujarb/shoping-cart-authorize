@@ -6,28 +6,34 @@
 
 @section('content')
 	<div class="row">
-		<div class="col-md-2 abc">
-			 	
-		</div>
-		<div class="col-md-8 col-md-offset-1 abc">
-			<h2>My Orders:</h2>
-			@foreach($orders as $order)
+		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
-			  <div class="panel-body">
-			    <ul class="list-group">
-				  @foreach($order->cart->items as $item)
-				  	<li class="list-group-item">
-				  		<span class="badge">${{$item['price']}}</span>
-				  		{{ $item['item']['title'] }} | {{$item['qty']}} Units
-				  	</li>
-				  @endforeach
-				</ul>
+			  <div class="panel-heading">
+			    <h3 class="panel-title">My Orders</h3>
 			  </div>
-			  <div class="panel-footer clearfix">
-			  	<strong class="pull-right">Total Price: ${{$order->cart->totalPrice}}</strong>
+			  <div class="panel-body">
+					@foreach($orders as $order)
+					<div class="panel panel-default">
+					  <div class="panel-body">
+					    <ul class="list-group">
+						  @foreach($order->cart->items as $item)
+						  	<li class="list-group-item">
+						  		<span class="badge">${{$item['price']}}</span>
+						  		{{ $item['item']['title'] }} | {{$item['qty']}} Units
+						  	</li>
+						  @endforeach
+						</ul>
+					  </div>
+					  <div class="panel-footer clearfix">
+					  	<strong class="pull-right">Total Price: ${{$order->cart->totalPrice}}</strong>
+					  </div>
+					</div>
+					@endforeach
+			  </div>
+			  <div class="panel-footer">
+
 			  </div>
 			</div>
-			@endforeach
 		</div>
 	</div>
 @endsection
